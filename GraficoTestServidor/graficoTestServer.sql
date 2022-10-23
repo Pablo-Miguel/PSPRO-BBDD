@@ -6,17 +6,17 @@ USE GraficoTest;
 
 CREATE TABLE Opciones_table (
     Id_opcion INT UNSIGNED PRIMARY KEY,
-    Texto VARCHAR(50) NOT NULL,
+    Texto VARCHAR(100) NOT NULL,
     Correcto BIT NOT NULL
 );
 
 CREATE TABLE Pregunta_table (
-    Pregunta VARCHAR(50) NOT NULL PRIMARY KEY
+    Pregunta VARCHAR(100) NOT NULL PRIMARY KEY
 );
 
 CREATE TABLE PreguntaOpciones_table (
     Id_PreguntaOpciones INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    Pregunta VARCHAR(50) NOT NULL,
+    Pregunta VARCHAR(100) NOT NULL,
     Id_opcion INT UNSIGNED,
     CONSTRAINT fk_pregunta FOREIGN KEY (Pregunta) REFERENCES Pregunta_table (Pregunta),
     CONSTRAINT fk_pregunta_opcion FOREIGN KEY (Id_opcion) REFERENCES Opciones_table (Id_opcion)
