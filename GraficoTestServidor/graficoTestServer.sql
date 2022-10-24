@@ -11,7 +11,7 @@ CREATE TABLE Opciones_table (
 );
 
 CREATE TABLE Pregunta_table (
-    Id_pregunta INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    Id_pregunta INT UNSIGNED PRIMARY KEY,
     Pregunta VARCHAR(100) UNIQUE NOT NULL
 );
 
@@ -47,13 +47,13 @@ VALUES
     (20, "2", 1)
 ;
 
-INSERT INTO Pregunta_table (Pregunta)
+INSERT INTO Pregunta_table (Id_pregunta, Pregunta)
 VALUES 
-    ("¿De qué color es el caballo blanco de Santiago?"),
-    ("¿Como se llama el dueño de Tesla?"),
-    ("¿Que es Java?"),
-    ("La intensidad de corriente eléctrica se mide utilizando:"),
-    ("¿Cuál es el único número que es par y primo?")
+    (1, "¿De qué color es el caballo blanco de Santiago?"),
+    (2, "¿Como se llama el dueño de Tesla?"),
+    (3, "¿Que es Java?"),
+    (4, "La intensidad de corriente eléctrica se mide utilizando:"),
+    (5, "¿Cuál es el único número que es par y primo?")
 ;
 
 INSERT INTO PreguntaOpciones_table (Id_pregunta, Id_opcion)
